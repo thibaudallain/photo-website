@@ -1,0 +1,30 @@
+.btn-metanav {
+  padding: 0.5em;
+  color: rgba(149, 165, 166, 0.4);
+  margin: 0.2em 0 0.2em 1em;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.btn-dev {
+  padding: 0.5em;
+  color: rgba(149, 165, 166, 0.4);
+  margin: 3em 0 0.2em 0;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.btn-dev:hover {
+  background-color: rgba(149, 165, 166, 0.4);
+  color: rgba(149, 165, 166,1.0);
+}
+
+.btn-metanav.active {
+  background-color: #ecf0f1;
+  color: rgba(149, 165, 166,1.0);
+}
+
+.btn-metanav:hover {
+  color: rgba(149, 165, 166,1.0);
+}
