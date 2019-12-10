@@ -13,6 +13,7 @@
   font-size: 20px;
   border-radius: 4px;
   background-color: white;
+  border: solid 1px rgba(149, 165, 166, 0.4);
 }
 
 .btn-dev:hover {
