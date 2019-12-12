@@ -93,11 +93,15 @@
 }
 
 @media (max-width: 1200px) {
+  .dev-cards {
+  width: 94vw;
+  }
   .dev-card {
     flex-direction: column;
+    width: 90vw;
   }
   .dev-images {
-    width: 100vw;
+    width: 100%;
     height: 70vh;
   }
   .calendar {
@@ -107,7 +111,7 @@
 
   }
   .dev-images-center {
-    width: 100vw;
+    width: 100%;
     height: 70vh;
   }
   .card-info-dev {
