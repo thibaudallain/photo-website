@@ -2,7 +2,18 @@
   background-color: white;
   margin: 40px;
   padding: 50px;
-  box-shadow: 2px 2px 20px #c8d6e5;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.section-principale {
+  background-color: white;
+  margin: 40px;
+  margin-top: 8em;
+  padding: 7em 2em 2em 2em;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  position: relative;
 }
 
 .rugby {
@@ -16,8 +27,15 @@
 
 .img-circle {
   border-radius: 50%;
-  height: 100px;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: -100px;
 }
+
+
 
 .img-card {
   border-radius: 4px;
@@ -49,24 +67,35 @@
   width: 900px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .container {
-    width: 700px;
+    width: 94vw;
   }
-}
-
-@media (max-width: 720px) {
-  .container {
-    width: 500px;
+  .section-principale {
+  margin: 40px 0;
+  margin-top: 8em;
+  padding: 7em 0.5em 0.5em 0.5em;
   }
-}
-
-@media (max-width: 540px) {
-  .container {
-    width: 300px;
+  .section-principale h2 {
+  font-size: 20px;
+  }
+  .section-principale p {
+  font-size: 16px;
   }
   .section {
-  margin: 10px;
-  padding: 5px;
+  margin: 1em 0;
+  padding: 0.5em 0.5em 0.5em 0.5em;
   }
+  .section h2 {
+  font-size: 20px;
+  }
+  .section p {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  }
+  .img-circle {
+    left: 1em;
+  }
+
 }

@@ -2,7 +2,21 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1em;
-  margin: 2em 0;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.dev-title {
+  font-size: 24px;
+  position: relative;
+}
+
+.dev-title-under {
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  bottom: 0px;
 }
 
 .card-info-text {
@@ -19,12 +33,15 @@
   background-color: white;
 }
 
+
 .dev-images {
   height: 368px;
   width: 600px;
   display: flex;
   overflow: auto;
   padding: 0.5em 0;
+  border-radius: 4px;
+  border: solid 1px rgba(0,0,0,0.1);
 }
 
 .dev-images-center {
@@ -35,14 +52,10 @@
   padding: 0.5em 0;
 }
 
-.one-third-img {
-  min-width: 207px;
+.height-max-img {
   height: 100%;
-  background-size: cover;
-  background-position: center;
   border-radius: 4px;
   margin: 0 0.5em;
-
 }
 
 .main-img h2 {
@@ -54,7 +67,7 @@
 }
 
 .card-info-dev {
-  padding: 0.5em 0 0 1em;
+  padding: 0.5em 0 0 2em;
   min-height: 100%;
   font-family: 'Roboto Slab';
   font-weight: lighter;
@@ -77,6 +90,29 @@
 
 .card-info p {
   font-weight: lighter;
+}
+
+@media (max-width: 1200px) {
+  .dev-card {
+    flex-direction: column;
+  }
+  .dev-images {
+    width: 100vw;
+    height: 70vh;
+  }
+  .calendar {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+  .dev-images-center {
+    width: 100vw;
+    height: 70vh;
+  }
+  .card-info-dev {
+  padding: 0.5em 0 0 0;
+}
 }
 
 

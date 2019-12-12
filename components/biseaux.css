@@ -1,0 +1,33 @@
+.test-biseau {
+  transform: skew(0deg, 2deg);
+  height: 70vh;
+  padding: 1em 0;
+  width: 100vw;
+  background-color: rgba(87, 101, 116, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-antiskew {
+  background-color: white;
+  margin: 40px;
+  padding: 50px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  transform: skew(0deg, -2deg);
+}
+
+@media (max-width: 1200px) {
+  .section-antiskew {
+  margin: 0;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  }
+  .section-antiskew h2 {
+  font-size: 20px;
+  }
+  .section-antiskew p {
+  font-size: 16px;
+  }
+}
