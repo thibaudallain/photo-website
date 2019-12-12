@@ -103,6 +103,7 @@
   .dev-images {
     width: 100%;
     height: 70vh;
+    overflow: auto;
   }
   .calendar {
     flex-direction: column;
