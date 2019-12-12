@@ -114,6 +114,29 @@
     flex-direction: column;
     justify-content: space-around;
   }
+  .flex-between {
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24px;
+  }
+  .actions {
+  margin-top: 5em;
+  }
+  .round-bordered {
+  border: 1px solid #5a5a5a;
+  border-radius: 50%;
+  width: 100px;
+  font-size: 48px;
+  color: #848484;
+  height: 100px;
+  padding: 3px;
+  margin: 0 3em 0 3em;
+}
+.btn-form {
+  padding: 10px 40px;
+  font-size: 48px;
+  font-weight: bolder;
+}
 }
 
 
