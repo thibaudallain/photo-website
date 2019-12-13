@@ -118,47 +118,47 @@
   .flex-between {
   flex-direction: column;
   justify-content: space-between;
-  font-size: 48px;
+  font-size: 16px;
   margin: 1em auto;
   }
   .actions {
-  margin-top: 5em;
+  margin-top: 3em;
   padding: 0;
   }
   .round-bordered {
   border: 1px solid #5a5a5a;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  font-size: 48px;
+  width: 2em;
+  height: 2em;
+  font-size: 16px;
   color: #848484;
   padding: 0.5em;
   margin: 0 1em 0 1em;
   }
   #counter {
-    font-size: 48px;
+    font-size: 16px;
   }
   h4 {
-    font-size: 40px;
+    font-size: 16px;
   }
   .btn-form {
   text-decoration: none;
   background-color: rgba(84, 160, 255, 0.7);
   color: #0a3d62;
-  padding: 10px 40px;
+  padding: 1em 1.5em;
   border-radius: 4px;
-  margin-bottom: 40px;
+  margin: 2em 0;
   display: inline-block;
-  font-size: 50px;
+  font-size: 24px;
   font-weight: bolder;
   }
   .big-bold {
     font-weight: bold;
-    font-size: 48px;
+    font-size: 24px;
     margin-right: 5px;
   }
   .small-light {
-    font-size: 32px;
+    font-size: 16px;
     color: #969696;
   }
 }

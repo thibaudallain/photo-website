@@ -53,3 +53,11 @@ p {
 .btn-profile:hover {
   background-color: rgba(84, 160, 255, 1.0);
 }
+
+@media (max-width: 1200px) {
+  .layout {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+}
