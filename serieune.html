@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/820c36ad74.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,600|Roboto:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Thibaud Allain</title>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-split-left">
+      <ul class="list-inline">
+          <li><a href="https://www.linkedin.com/in/thibaud-allain-631345198/"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://github.com/thibaudallain"><i class="fab fa-github-square"></i></a></li>
+      </ul>
+    </div>
+    <div class="header-split-right">
+      <a href="index.html" class="btn-metanav active">TA</a>
+      <a href="dev.html" class="btn-metanav">D</a>
+      <a href="photos.html" class="btn-metanav">P</a>
+    </div>
+  </div>
+  <div class="fond">
+    <div class="cadre-global">
+
+      <div class="grande">
+
+          <div id="conteneur-parallax">
+            <div id="biseau1" style="background-image: url('images/parallax/1.png');"></div>
+            <div id="biseau2" style="background-image: url('images/parallax/2.png');"></div>
+            <div id="biseau3" style="background-image: url('images/parallax/3.png');"></div>
+            <div id="biseau4" style="background-image: url('images/parallax/4.png');"></div>
+            <div id="biseau5" style="background-image: url('images/parallax/5.png');"></div>
+            <div id="biseau6" style="background-image: url('images/parallax/6.png');"></div>
+            <div id="biseau7"></div>
+          </div>
+          <div id="scrollbar">
+          </div>
+      </div>
+      <div id="selectors">
+        <div id="selector1" class="selector"></div>
+        <div id="selector2" class="selector"></div>
+        <div id="selector3" class="selector"></div>
+      </div>
+    </div>
+</div>
+
+  <script type= "text/javascript">
+    var scrollbar = document.getElementById('scrollbar')
+    var biseau1 = document.getElementById('biseau1')
+    var biseau2 = document.getElementById('biseau2')
+    var biseau3 = document.getElementById('biseau3')
+    var biseau4 = document.getElementById('biseau4')
+    var biseau5 = document.getElementById('biseau5')
+    var biseau6 = document.getElementById('biseau6')
+    var biseau7 = document.getElementById('biseau7')
+
+    const parallaxbubbles = (variable) => {
+      if (variable > 0) {
+       biseau1.style.top = - variable * 2.0 + 'px' // move bubble1 at 20% of scroll rate
+       biseau2.style.top = - variable * 1.8 + 'px' // move bubble2 at 50% of scroll rate
+       biseau3.style.top = - variable * 1.6 + 'px'
+       biseau4.style.top = - variable * 1.4 + 'px'
+       biseau5.style.top = - variable * 1.2 + 'px'
+       biseau6.style.top = - variable * 1.0 + 'px'
+       biseau7.style.bottom = (variable * 2.0) - 100 + 'px'
+      }
+    }
+
+    scrollbar.addEventListener('mousemove', (event) => { // on page scroll
+     let coeff = ((scrollbar.getBoundingClientRect().height + scrollbar.getBoundingClientRect().y) - event.screenY + 100) / 10;
+     parallaxbubbles(coeff);
+     console.log(scrollbar.getBoundingClientRect(), event.screenY, coeff)
+    });
+</script>
+
+</body>
+</html>

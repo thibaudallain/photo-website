@@ -1,0 +1,136 @@
+.fond {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#conteneur-parallax {
+  width: 800px;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+#scrollbar {
+  width: 20px;
+  height: 700px;
+  border: solid 1px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-left: 2em;
+}
+
+.grande {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+}
+
+#biseau1
+{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 70vw auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 10;
+}
+#biseau2
+{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 70vw auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 9;
+}
+#biseau3
+{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 70vw auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 8;
+}
+#biseau4
+{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 70vw auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 7;
+}
+#biseau5
+{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 70vw auto;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 6;
+}
+#biseau6
+{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: 70vw auto;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 5;
+}
+
+#biseau7
+{
+  background-color: white;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  bottom: -100px;
+  left: 0%;
+  z-index: 11;
+}
+
+#selectors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cadre-global {
+  display: flex;
+  flex-direction: column;
+}
+
+.selector {
+  height: 5px;
+  width: 30px;
+  background-color: black;
+  margin: 0 2em;
+}

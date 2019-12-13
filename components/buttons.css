@@ -29,3 +29,18 @@
 .btn-metanav:hover {
   color: rgba(149, 165, 166,1.0);
 }
+
+@media (max-width: 1200px) {
+  .btn-dev {
+  padding: 1em;
+  color: rgba(149, 165, 166, 0.8);
+  margin: 3em 0 0.2em 0;
+  font-size: 24px;
+  border-radius: 4px;
+  background-color: rgba(149, 165, 166, 0.4);
+  border: solid 1px rgba(149, 165, 166, 0.4);
+  }
+  .conteneur-decouvrir {
+    align-self: center;
+  }
+}

@@ -78,14 +78,22 @@
   }
   .day {
     font-size: 30px;
+    height: 60vh;
+    justify-content: space-around;
     margin: 0.5em 0;
   }
   .week {
     font-size: 30px;
+    padding: 3px 20px;
     margin: 0.5em 0;
   }
   .header-calendar {
     padding-bottom: 1em;
     font-weight: bolder;
+  }
+  .grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   }
 }
