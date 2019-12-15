@@ -1,3 +1,11 @@
+#serieune {
+  font-size: 32px;
+  padding: 0;
+  color: black;
+  font-family: 'Roboto Slab';
+  font-weight: bolder;
+}
+
 .fond {
   height: 100vh;
   width: 100vw;
@@ -10,114 +18,92 @@
   justify-content: center;
 }
 
-#conteneur-parallax {
-  width: 800px;
-  height: 700px;
+.conteneur-parallax {
+  width: 1000px;
+  height: 600px;
   position: relative;
   overflow: hidden;
 }
 
-#scrollbar {
-  width: 20px;
-  height: 700px;
+.conteneur-parallax-presentation {
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.presentation {
+  margin-top: 3em;
+  text-align: left;
+  border-left: solid 1px rgba(0,0,0,0.2);
+  padding: 1em;
+}
+
+.img-circle-parallax {
+  margin-top: 3em;
   border: solid 1px rgba(0,0,0,0.2);
-  border-radius: 10px;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 2em;
+  filter: grayscale(0.8);
+}
+
+#scrollbar {
+  width: 30px;
+  height: 600px;
+  border: solid 1px rgba(0,0,0,0.2);
+  border-radius: 30px;
   margin-left: 2em;
 }
 
 .grande {
-  height: 80vh;
+  height: 700px;
+  margin-top: -5em;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   background-color: white;
 }
 
-#biseau1
+#biseau1,
+#biseau2,
+#biseau3,
+#biseau4,
+#biseau5,
+#biseau6,
+#biseaubir1,
+#biseaubir2,
+#biseaubir3,
+#biseauddm1,
+#biseauddm2
 {
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 70vw auto;
+  background-size: 1000px;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  bottom: 0%;
-  left: 0%;
-  z-index: 10;
-}
-#biseau2
-{
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 70vw auto;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  bottom: 0%;
-  left: 0%;
-  z-index: 9;
-}
-#biseau3
-{
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 70vw auto;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  bottom: 0%;
-  left: 0%;
-  z-index: 8;
-}
-#biseau4
-{
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 70vw auto;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  bottom: 0%;
-  left: 0%;
-  z-index: 7;
-}
-#biseau5
-{
-  background-position: bottom;
-  background-repeat: no-repeat;
-  position: absolute;
-  background-size: 70vw auto;
-  height: 100%;
-  width: 100%;
-  bottom: 0%;
-  left: 0%;
-  z-index: 6;
-}
-#biseau6
-{
-  background-position: bottom;
-  background-repeat: no-repeat;
-  position: absolute;
-  background-size: 70vw auto;
-  height: 100%;
-  width: 100%;
-  bottom: 0%;
-  left: 0%;
-  z-index: 5;
-}
-
-#biseau7
-{
-  background-color: white;
-  position: absolute;
-  height: 100px;
+  height: 700px;
   width: 100%;
   bottom: -100px;
-  left: 0%;
-  z-index: 11;
 }
+#biseau1 { z-index: 10; left: 0%; }
+#biseau2 { z-index: 9; left: 0%; }
+#biseau3 { z-index: 8; left: 0%; }
+#biseau4 { z-index: 7; left: 0%; }
+#biseau5 { z-index: 6; left: 0%; }
+#biseau6 { z-index: 5; left: 0%; }
+#biseaubir1 { z-index: 3; background-size: 1100px; background-position: center}
+#biseaubir2 { z-index: 5; background-size: 1100px; background-position: center}
+#biseaubir3 { z-index: 4; background-size: 1100px; background-position: center}
+#biseauddm1 { bottom: -50px; }
+#biseauddm2 { bottom: -50px; }
 
 #selectors {
+  border-top: solid 1px rgba(0,0,0,0.2);
+  margin-top: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,8 +115,22 @@
 }
 
 .selector {
-  height: 5px;
-  width: 30px;
-  background-color: black;
-  margin: 0 2em;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  border: solid 1px rgba(0,0,0,0.2);
+  margin: 2em 2em;
+  transition: all 0.3s;
+}
+
+.selector:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.active {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.hidden {
+  display: none;
 }

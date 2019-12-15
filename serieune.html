@@ -13,14 +13,11 @@
   <div class="header">
     <div class="header-split-left">
       <ul class="list-inline">
-          <li><a href="https://www.linkedin.com/in/thibaud-allain-631345198/"><i class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="https://github.com/thibaudallain"><i class="fab fa-github-square"></i></a></li>
+          <li><div id="serieune">Série Une</div></li>
       </ul>
     </div>
     <div class="header-split-right">
       <a href="index.html" class="btn-metanav active">TA</a>
-      <a href="dev.html" class="btn-metanav">D</a>
-      <a href="photos.html" class="btn-metanav">P</a>
     </div>
   </div>
   <div class="fond">
@@ -28,19 +25,49 @@
 
       <div class="grande">
 
-          <div id="conteneur-parallax">
+        <div id="presentation" class="conteneur-parallax-presentation">
+          <img src="images/parallax/thib.jpg" class="img-circle-parallax" alt="">
+          <div class="presentation">
+            <p>What is <em>Série une</em>?</p>
+            <br>
+            <p><em>Série une</em> emerged from a frustration.</p>
+            <p>When looking back at my photos, I always felt it did not properly encapsulate depth or distance.</p>
+            <p>I read about the <strong>parallax effect</strong> in web design and decided to apply it to some of my pictures.</p>
+            <br>
+            <br>
+            <p>How does it work?</p>
+            <br>
+            <p>1.Select one of the tabs.</p>
+            <p>2.Pass your mouse over the scrollbar on the right.</p>
+            <p>3.Watch the photo evolve.</p>
+          </div>
+        </div>
+
+          <div id="nepal" class="conteneur-parallax hidden">
             <div id="biseau1" style="background-image: url('images/parallax/1.png');"></div>
             <div id="biseau2" style="background-image: url('images/parallax/2.png');"></div>
             <div id="biseau3" style="background-image: url('images/parallax/3.png');"></div>
             <div id="biseau4" style="background-image: url('images/parallax/4.png');"></div>
             <div id="biseau5" style="background-image: url('images/parallax/5.png');"></div>
             <div id="biseau6" style="background-image: url('images/parallax/6.png');"></div>
-            <div id="biseau7"></div>
           </div>
+
+          <div id="birm" class="conteneur-parallax hidden">
+            <div id="biseaubir1" style="background-image: url('images/parallax/bir-1.png');"></div>
+            <div id="biseaubir2" style="background-image: url('images/parallax/bir-2.png');"></div>
+            <div id="biseaubir3" style="background-image: url('images/parallax/bir-3.png');"></div>
+          </div>
+
+          <div id="ddm" class="conteneur-parallax hidden">
+            <div id="biseauddm1" style="background-image: url('images/parallax/ddm-1.png');"></div>
+            <div id="biseauddm2" style="background-image: url('images/parallax/ddm-2.png');"></div>
+          </div>
+
           <div id="scrollbar">
           </div>
       </div>
       <div id="selectors">
+        <div id="selector0" class="selector active"></div>
         <div id="selector1" class="selector"></div>
         <div id="selector2" class="selector"></div>
         <div id="selector3" class="selector"></div>
@@ -49,32 +76,105 @@
 </div>
 
   <script type= "text/javascript">
-    var scrollbar = document.getElementById('scrollbar')
-    var biseau1 = document.getElementById('biseau1')
-    var biseau2 = document.getElementById('biseau2')
-    var biseau3 = document.getElementById('biseau3')
-    var biseau4 = document.getElementById('biseau4')
-    var biseau5 = document.getElementById('biseau5')
-    var biseau6 = document.getElementById('biseau6')
-    var biseau7 = document.getElementById('biseau7')
+    const scrollbar = document.getElementById('scrollbar')
+    const biseau1 = document.getElementById('biseau1')
+    const biseau2 = document.getElementById('biseau2')
+    const biseau3 = document.getElementById('biseau3')
+    const biseau4 = document.getElementById('biseau4')
+    const biseau5 = document.getElementById('biseau5')
+    const biseau6 = document.getElementById('biseau6')
+    const biseau7 = document.getElementById('biseau7')
+    const biseaubir1 = document.getElementById('biseaubir1')
+    const biseaubir2 = document.getElementById('biseaubir2')
+    const biseaubir3 = document.getElementById('biseaubir3')
+    const biseauddm1 = document.getElementById('biseauddm1')
+    const biseauddm2 = document.getElementById('biseauddm2')
+    const selector0 = document.getElementById('selector0')
+    const selector1 = document.getElementById('selector1')
+    const selector2 = document.getElementById('selector2')
+    const selector3 = document.getElementById('selector3')
+    const nepalConteneur = document.getElementById('nepal')
+    const ddmConteneur = document.getElementById('ddm')
+    const birmConteneur = document.getElementById('birm')
+    const presentationConteneur = document.getElementById('presentation')
 
-    const parallaxbubbles = (variable) => {
-      if (variable > 0) {
-       biseau1.style.top = - variable * 2.0 + 'px' // move bubble1 at 20% of scroll rate
-       biseau2.style.top = - variable * 1.8 + 'px' // move bubble2 at 50% of scroll rate
-       biseau3.style.top = - variable * 1.6 + 'px'
-       biseau4.style.top = - variable * 1.4 + 'px'
-       biseau5.style.top = - variable * 1.2 + 'px'
-       biseau6.style.top = - variable * 1.0 + 'px'
-       biseau7.style.bottom = (variable * 2.0) - 100 + 'px'
+    const nepal = (variable) => {
+      if (variable > 0 && variable < 50) {
+       biseau1.style.bottom = variable * 2.0 - 100 + 'px' // move bubble1 at 20% of scroll rate
+       biseau2.style.bottom = variable * 1.8 - 100 + 'px' // move bubble2 at 50% of scroll rate
+       biseau3.style.bottom = variable * 1.6 - 100 + 'px'
+       biseau4.style.bottom = variable * 1.4 - 100 + 'px'
+       biseau5.style.bottom = variable * 1.2 - 100 + 'px'
       }
     }
 
+    const birm = (variable) => {
+      biseaubir1.style.backgroundSize = - variable * 1.0 + 1100 + 'px'
+      biseaubir2.style.backgroundSize = - variable * 0.2 + 1100 + 'px'
+      if (variable < 25) {
+       biseaubir3.style.backgroundSize = - variable * 0.9 + 1100 + 'px'
+      } else {
+       biseaubir3.style.backgroundSize = - variable * 0.7 + 'px'
+      }
+    }
+
+    const ddm = (variable) => {
+      biseauddm1.style.bottom = - variable -50 + 'px'
+      biseauddm2.style.backgroundSize = variable * 0.5 + 1000 + 'px'
+    }
+
     scrollbar.addEventListener('mousemove', (event) => { // on page scroll
-     let coeff = ((scrollbar.getBoundingClientRect().height + scrollbar.getBoundingClientRect().y) - event.screenY + 100) / 10;
-     parallaxbubbles(coeff);
-     console.log(scrollbar.getBoundingClientRect(), event.screenY, coeff)
+      let coeff = ((scrollbar.getBoundingClientRect().height + scrollbar.getBoundingClientRect().y) - event.screenY + 100) / 15;
+      nepal(coeff);
+      birm(coeff);
+      ddm(coeff);
     });
+
+    selector0.addEventListener('click', (event) => {
+      presentationConteneur.classList.remove('hidden');
+      nepalConteneur.classList.add('hidden');
+      birmConteneur.classList.add('hidden');
+      ddmConteneur.classList.add('hidden');
+      selector0.classList.add('active');
+      selector1.classList.remove('active');
+      selector2.classList.remove('active');
+      selector3.classList.remove('active');
+    });
+
+    selector1.addEventListener('click', (event) => {
+      presentationConteneur.classList.add('hidden');
+      nepalConteneur.classList.remove('hidden');
+      birmConteneur.classList.add('hidden');
+      ddmConteneur.classList.add('hidden');
+      selector0.classList.remove('active');
+      selector1.classList.add('active');
+      selector2.classList.remove('active');
+      selector3.classList.remove('active');
+    });
+
+    selector2.addEventListener('click', (event) => {
+      presentationConteneur.classList.add('hidden');
+      nepalConteneur.classList.add('hidden');
+      birmConteneur.classList.remove('hidden');
+      ddmConteneur.classList.add('hidden');
+      selector0.classList.remove('active');
+      selector1.classList.remove('active');
+      selector2.classList.add('active');
+      selector3.classList.remove('active');
+    });
+
+    selector3.addEventListener('click', (event) => {
+      presentationConteneur.classList.add('hidden');
+      nepalConteneur.classList.add('hidden');
+      birmConteneur.classList.add('hidden');
+      ddmConteneur.classList.remove('hidden');
+      selector0.classList.remove('active');
+      selector1.classList.remove('active');
+      selector2.classList.remove('active');
+      selector3.classList.add('active');
+
+    });
+
 </script>
 
 </body>
