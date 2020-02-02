@@ -4,9 +4,11 @@ body {
   font-family: 'Roboto';
   font-size: 1em;
   text-align: left;
-  background-image: url("../images/thib-bg.png");
+  background-color: white;
   background-size: cover;
   background-position: center;
+  color: rgba(0,0,0,0.8);
+
 }
 
 .layout {
@@ -33,7 +35,7 @@ p {
   margin: 0;
   font-weight: lighter;
   font-family: 'Roboto Slab';
-  color: rgba(0, 15, 150,1.0);
+  color: rgba(0,0,0,0.8);
 }
 
 .section p {
