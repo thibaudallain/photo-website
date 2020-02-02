@@ -17,10 +17,6 @@
   justify-content: center;
 }
 
-.header {
-  margin-bottom: 20px;
-}
-
 .header-row {
   display: flex;
   align-items: center;

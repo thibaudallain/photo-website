@@ -3,7 +3,7 @@ body {
   font-size: 16px;
   font-family: 'Roboto';
   font-size: 1em;
-  text-align: center;
+  text-align: left;
   background-image: url("../images/thib-bg.png");
   background-size: cover;
   background-position: center;
@@ -24,7 +24,7 @@ a {
 h1, h2, h3 {
   font-family: 'Roboto';
   font-size: 2.5em;
-  color: rgba(87, 101, 116,1.0);
+  color: rgba(0, 15, 150,1.0);
 }
 
 p {
@@ -32,7 +32,8 @@ p {
   font-size: 20px;
   margin: 0;
   font-weight: lighter;
-  font-family: 'Roboto Slab'
+  font-family: 'Roboto Slab';
+  color: rgba(0, 15, 150,1.0);
 }
 
 .section p {

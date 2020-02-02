@@ -35,11 +35,20 @@
             <p>I read about the <strong>parallax effect</strong> in web design and decided to apply it to some of my pictures.</p>
             <br>
             <br>
-            <p>How does it work?</p>
-            <br>
-            <p>1.Select one of the tabs.</p>
-            <p>2.Pass your mouse over the scrollbar on the right.</p>
-            <p>3.Watch the photo evolve.</p>
+            <div class="how-to-big">
+              <p>How does it work?</p>
+              <br>
+              <p>1.Select one of the tabs.</p>
+              <p>2.Pass your mouse over the scrollbar on the right.</p>
+              <p>3.Watch the photo evolve.</p>
+            </div>
+            <div class="how-to-small">
+              <p>How does it work?</p>
+              <br>
+              <p>1.Select one of the tabs.</p>
+              <p>2.Scroll on the photo.</p>
+              <p>3.Watch the photo evolve.</p>
+            </div>
           </div>
         </div>
 
@@ -63,6 +72,11 @@
             <div id="biseauddm2" style="background-image: url('images/parallax/ddm-2.png');"></div>
           </div>
 
+          <div id="ddm2" class="conteneur-parallax hidden">
+            <div id="biseauddm21" style="background-image: url('images/parallax/ddm2-1.png');"></div>
+            <div id="biseauddm22" style="background-image: url('images/parallax/ddm2-2.png');"></div>
+          </div>
+
           <div id="scrollbar">
           </div>
       </div>
@@ -71,6 +85,7 @@
         <div id="selector1" class="selector"></div>
         <div id="selector2" class="selector"></div>
         <div id="selector3" class="selector"></div>
+        <div id="selector4" class="selector"></div>
       </div>
     </div>
 </div>
@@ -89,12 +104,16 @@
     const biseaubir3 = document.getElementById('biseaubir3')
     const biseauddm1 = document.getElementById('biseauddm1')
     const biseauddm2 = document.getElementById('biseauddm2')
+    const biseauddm21 = document.getElementById('biseauddm21')
+    const biseauddm22 = document.getElementById('biseauddm22')
     const selector0 = document.getElementById('selector0')
     const selector1 = document.getElementById('selector1')
     const selector2 = document.getElementById('selector2')
     const selector3 = document.getElementById('selector3')
+    const selector4 = document.getElementById('selector4')
     const nepalConteneur = document.getElementById('nepal')
     const ddmConteneur = document.getElementById('ddm')
+    const ddm2Conteneur = document.getElementById('ddm2')
     const birmConteneur = document.getElementById('birm')
     const presentationConteneur = document.getElementById('presentation')
 
@@ -119,8 +138,14 @@
     }
 
     const ddm = (variable) => {
-      biseauddm1.style.bottom = - variable -50 + 'px'
+      biseauddm1.style.bottom = - variable - 50 + 'px'
       biseauddm2.style.backgroundSize = variable * 0.5 + 1000 + 'px'
+    }
+
+    const ddm2 = (variable) => {
+      biseauddm21.style.left = variable * 0.7 - 100 + 'px'
+      biseauddm21.style.bottom = variable * 0.2 - 20 + 'px'
+      biseauddm22.style.backgroundSize = variable * 0.5 + 1100 + 'px'
     }
 
     scrollbar.addEventListener('mousemove', (event) => { // on page scroll
@@ -128,6 +153,7 @@
       nepal(coeff);
       birm(coeff);
       ddm(coeff);
+      ddm2(coeff);
     });
 
     selector0.addEventListener('click', (event) => {
@@ -135,10 +161,12 @@
       nepalConteneur.classList.add('hidden');
       birmConteneur.classList.add('hidden');
       ddmConteneur.classList.add('hidden');
+      ddm2Conteneur.classList.add('hidden');
       selector0.classList.add('active');
       selector1.classList.remove('active');
       selector2.classList.remove('active');
       selector3.classList.remove('active');
+      selector4.classList.remove('active');
     });
 
     selector1.addEventListener('click', (event) => {
@@ -146,10 +174,12 @@
       nepalConteneur.classList.remove('hidden');
       birmConteneur.classList.add('hidden');
       ddmConteneur.classList.add('hidden');
+      ddm2Conteneur.classList.add('hidden');
       selector0.classList.remove('active');
       selector1.classList.add('active');
       selector2.classList.remove('active');
       selector3.classList.remove('active');
+      selector4.classList.remove('active');
     });
 
     selector2.addEventListener('click', (event) => {
@@ -157,10 +187,12 @@
       nepalConteneur.classList.add('hidden');
       birmConteneur.classList.remove('hidden');
       ddmConteneur.classList.add('hidden');
+      ddm2Conteneur.classList.add('hidden');
       selector0.classList.remove('active');
       selector1.classList.remove('active');
       selector2.classList.add('active');
       selector3.classList.remove('active');
+      selector4.classList.remove('active');
     });
 
     selector3.addEventListener('click', (event) => {
@@ -168,11 +200,25 @@
       nepalConteneur.classList.add('hidden');
       birmConteneur.classList.add('hidden');
       ddmConteneur.classList.remove('hidden');
+      ddm2Conteneur.classList.add('hidden');
       selector0.classList.remove('active');
       selector1.classList.remove('active');
       selector2.classList.remove('active');
       selector3.classList.add('active');
+      selector4.classList.remove('active');
+    });
 
+    selector4.addEventListener('click', (event) => {
+      presentationConteneur.classList.add('hidden');
+      nepalConteneur.classList.add('hidden');
+      birmConteneur.classList.add('hidden');
+      ddmConteneur.classList.add('hidden');
+      ddm2Conteneur.classList.remove('hidden');
+      selector0.classList.remove('active');
+      selector1.classList.remove('active');
+      selector2.classList.remove('active');
+      selector3.classList.remove('active');
+      selector4.classList.add('active');
     });
 
 </script>
